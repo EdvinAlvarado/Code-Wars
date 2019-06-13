@@ -59,13 +59,18 @@ std::string sum_strings(std::string a, std::string b) {
 			} else{
 				finalv.push_back(*it - 10);
 				*(it+1) += 1;
-			}
-			
+			}			
+		} else {
+			finalv.push_back(*it);
 		}
 	}
 	// std::cout << std::endl;
 
 	std::reverse(finalv.begin(), finalv.end());
+
+	if (finalv[0] == 0 && finalv.size() > 1) {
+		finalv.erase(finalv.begin());
+	}
 
 	print_vector(v1);
 	print_vector(v2);
