@@ -1,1 +1,5 @@
-*/target/*
+target
+zig-cache
+*.out
+*.o
+*.hi
